@@ -1,0 +1,24 @@
+#!/usr/bin/bash
+
+round_desc=$1
+
+if [ -z "$round_desc" ];
+then
+	echo "enter a valid folder"
+	read round_desc
+fi
+
+cd "$round_desc"
+
+rm -rf codeforces.png notify.sh parser.py runall.sh test.sh commenter.py open.sh script.sh input.txt output.txt .vscode cpp
+
+for dir in *;
+do
+	if [ -d "$dir" ];
+	then
+		rm -f "$dir/$dir"
+	fi
+done
+
+
+# remove all the bot files and leave the problem files only

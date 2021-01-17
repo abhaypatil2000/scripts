@@ -1,0 +1,20 @@
+#!/usr/bin/bash
+
+round_desc=$1
+
+if [ -z "$round_desc" ];
+then
+	echo "enter a valid folder"
+	read round_desc
+fi
+
+mkdir "$round_desc"
+cp "$PWD"/files/{codeforces.png,notify.sh,parser.py,runall.sh,test.sh,commenter.py,open.sh,script.sh,cpp} ./"$round_desc"/ -r
+
+firefox "https://codeforces.com/contest/$round_desc/"
+firefox "https://codeforces.com/contest/$round_desc/problems"
+
+cd "$round_desc"
+
+# all the bot files are stored in the "files" folder
+# this script will copy those files from there to the Round folder
