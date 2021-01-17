@@ -2,7 +2,7 @@
 
 # to check updates to the AUR repos on arch linux
 # to use add alias to zshrc or bashrc
-# alias uu='~/aur/aur_update.sh | column -t | sort'
+# alias uu='/home/abhay/aur/aur_update.sh | column -t | sort' // replace /home/abhay/aur/aru_update with path to script
 # now use uu to check updates to AUR packages
 dir_count=0
 
