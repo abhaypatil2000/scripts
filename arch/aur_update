@@ -2,7 +2,7 @@
 
 # to check updates to the AUR repos on arch linux
 # to use add alias to zshrc or bashrc
-# alias uu='/home/abhay/aur/aur_update | column -t | sort' // replace /home/abhay/aur/aur_update with path to script
+# alias uu='/home/abhay/Desktop/Coding/scripting/scripts/arch/aur_update | column -t | sort'
 # now use uu to check updates to AUR packages
 dir_count=0
 
@@ -18,10 +18,8 @@ do
 	then
 		(( dir_count++ ))
 		(
-			# echo "$dir"
 			cd "$dir"
 			out=$(git fetch --dry-run)
-			temp=$(($dir_count % 4))
 			if [ -z "$out" ];
 			then
 				out="UP_TO_DATE"

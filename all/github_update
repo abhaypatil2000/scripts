@@ -1,0 +1,40 @@
+#!/usr/bin/bash
+
+###### mention all the repos below, for which to check updates
+
+# to check the updates for github repo codeforces-bot
+# to check the updates for github repo competitive library (special-potato)
+# to check the updates for github repo scripts
+
+# to use add alias to zshrc or bashrc
+# alias ug='/home/abhay/Desktop/Coding/scripting/scripts/all/github_update | column -t | sort'
+# now use ug to check for the updates in above mentioned repos
+
+RED='\e[31m'
+GREEN='\e[32m'
+COLOR_RESET='\e[0m'
+
+
+function func()
+{
+	path="$1"
+	desc="$2"
+
+	cd "$path"
+	out=$(git fetch --dry-run)
+	if [ -z "$out" ];
+	then
+		out="UP_TO_DATE"
+		echo -ne "${GREEN}$desc : $out${COLOR_RESET}\n"
+	else
+		out="UPDATE_AVAILABLE"
+		echo -ne "${RED}$desc : $out${COLOR_RESET}\n"
+	fi
+}
+
+func "/home/abhay/Desktop/Coding/scripting/scripts" "Desktop/Coding/scripting/scripts all_update_scripts" &
+func "/home/abhay/Desktop/Codeforces/files" "Desktop/Codeforces/files codeforces-bot" &
+func "/home/abhay/Desktop/Coding/competitive" "Desktop/Coding/competitive competitive-library" &
+
+
+wait
