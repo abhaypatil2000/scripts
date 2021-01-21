@@ -19,7 +19,7 @@ do
 		(( dir_count++ ))
 		(
 			cd "$dir"
-			out=$(git fetch --dry-run)
+			out=$(git fetch --dry-run 2>&1)
 			if [ -z "$out" ];
 			then
 				out="UP_TO_DATE"
