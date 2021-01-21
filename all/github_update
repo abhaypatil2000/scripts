@@ -21,7 +21,7 @@ function func()
 	desc="$2"
 
 	cd "$path"
-	out=$(git fetch --dry-run)
+	out=$(git fetch --dry-run 2>&1)
 	if [ -z "$out" ];
 	then
 		out="UP_TO_DATE"
