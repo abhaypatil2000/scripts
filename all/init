@@ -9,12 +9,15 @@ then
 fi
 
 mkdir "$round_desc"
-cp "$PWD"/files/{codeforces.png,notify.sh,parser.py,runall.sh,test.sh,commenter.py,open.sh,script.sh,cpp} ./"$round_desc"/ -r
+cp "$PWD"/files/{codeforces.png,notify,parser,runall,test,commenter,open,script,cpp} ./"$round_desc"/ -r
+
+code "$PWD"/"$round_desc"
 
 firefox "https://codeforces.com/contest/$round_desc/"
 firefox "https://codeforces.com/contest/$round_desc/problems"
 
 cd "$round_desc"
+"$PWD"/parser "$round_desc"
 
 # all the bot files are stored in the "files" folder
 # this script will copy those files from there to the Round folder

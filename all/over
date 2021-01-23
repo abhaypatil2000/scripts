@@ -10,7 +10,7 @@ fi
 
 cd "$round_desc"
 
-rm -rf codeforces.png notify.sh parser.py runall.sh test.sh commenter.py open.sh script.sh input.txt output.txt .vscode cpp
+rm -rf codeforces.png notify parser runall test commenter open script input.txt output.txt .vscode cpp
 
 for dir in *;
 do
