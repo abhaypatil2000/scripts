@@ -1,9 +1,0 @@
-#!/usr/bin/bash
-
-du -sh .
-for file_dir in *;
-do
-        du -sh "$file_dir"
-done | column -t
-
-# this command will display the sizes of all the files and folders in the current folder
