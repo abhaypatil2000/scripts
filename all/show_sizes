@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+du -sh .
 for file_dir in *;
 do
         du -sh "$file_dir"
