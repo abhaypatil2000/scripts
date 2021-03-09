@@ -9,3 +9,6 @@ done
 
 xdg-open "$query"
 # echo "$query"
+
+tilix --quake # comment this line if you wish don't use tilix in quake mode
+# this will basically hide the tilix quake prompt
