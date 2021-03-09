@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+query="https://www.google.com/search?client=firefox-b-d&q="
+
+for arg in "$@"
+do
+	query="$query+$arg"
+done
+
+xdg-open "$query"
+# echo "$query"
