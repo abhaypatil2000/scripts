@@ -19,7 +19,7 @@ do
 		(( dir_count++ ))
 		(
 			cd "$dir"
-			out=$(git clean -df 2>&1)
+			out=$(git clean -xdf 2>&1)
 			if [ -z "$out" ];
 			then
 				out="ALL_CLEAN"
