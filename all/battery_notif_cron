@@ -8,7 +8,7 @@ export XDG_RUNTIME_DIR="/run/user/1000"
 
 battery_level=`acpi -b | grep -P -o '[0-9]+(?=%)'`
 if on_ac_power; then
-    if [ $battery_level -ge 85 ]; then
+    if [ $battery_level -ge 80 ]; then
         notify-send --urgency=CRITICAL "Battery Overcharge" "Level: ${battery_level}% "
         paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga
     fi
