@@ -33,8 +33,7 @@ function func()
 }
 
 func "/home/abhay/Desktop/Coding/scripting/scripts" "Desktop/Coding/scripting/scripts all_update_scripts" &
-func "/home/abhay/Desktop/Codeforces/files" "Desktop/Codeforces/files codeforces-bot" &
-func "/home/abhay/Desktop/Coding/competitive" "Desktop/Coding/competitive competitive-library" &
+func "/home/abhay/Desktop/Coding/competitive" "Desktop/Coding/competitive competitive-library-and-bot" &
 
 
 wait
